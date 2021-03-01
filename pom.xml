@@ -10,6 +10,7 @@
 
     <modules>
         <module>ferst-web-app</module>
+        <module>ferst-jsf-app</module>
     </modules>
     <packaging>pom</packaging>
 
