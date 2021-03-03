@@ -11,6 +11,7 @@
     <modules>
         <module>ferst-web-app</module>
         <module>ferst-jsf-app</module>
+        <module>ferst-api-app</module>
     </modules>
     <packaging>pom</packaging>
 
