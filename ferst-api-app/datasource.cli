@@ -1,0 +1,18 @@
+
+module add \
+    --name=com.mysql.driver \
+    --dependencies=javax.api,javax.transaction.api \
+   # --resources=/Users/arturmalcev/IdeaProjects/mysql-connector-java-8.0.19.jar
+   --resources=C:\Users\ArturiOS\IdeaProjects\lib\mysql-connector-java-8.0.23.jar
+
+/subsystem=datasources/jdbc-driver=mysql:add( driver-name=mysql, driver-module-name=com.mysql.driver, driver-class-name=com.mysql.jdbc.Driver )
+
+data-source add \
+    --jndi-name=java:/jboss/datasources/MySQLDS \
+    --name=MySQLDS \
+    --connection-url=jdbc:mysql://localhost:3306/javaWeb \
+    --driver-name=mysql \
+    --user-name=root \
+    --password=root
+
+:reload
